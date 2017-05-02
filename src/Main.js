@@ -3,10 +3,13 @@
 // to React.createElement function calls
 import React from 'react';
 import HelloWorld from './HelloWorld';
-// if the import that is without braces will get the value that is on the right
-// hand side of 'export default'
+// the import that is without braces will get
+// the value that is on the right-hand side of `export default`
 import Square, { BlueSquare } from './Square';
 import OrangeRectangle from './OrangeRectangle';
+import Shape from './Shape';
+import Greetings from './Greetings';
+import ShadesOfGrey from './ShadesOfGrey';
 
 function Main (props) {
   const style = {
@@ -15,18 +18,23 @@ function Main (props) {
     alignItems: 'center'
   };
 
-// for example below we could create a component that renders a font awesome icon
-// then we could render that icon wherever we want
   return (
     <div style={style} className="main">
       <BlueSquare />
-      <HelloWorld name="Jon Snow" />
-      <HelloWorld name="Daenerys Targaryan" />
-      <HelloWorld name="Cersei Lannister" />
+      <HelloWorld name="Snoop Dogg" />
+      <HelloWorld name="Marshall Mathers" />
+      <HelloWorld name="Dr Dre" />
       <OrangeRectangle />
       <Square color="LimeGreen" />
-      <Square color="Lavender" />
-
+      <Square color="Fuchsia" />
+      <Square color="Brown" />
+      <Shape color="Red" type="Circle" />
+      <Shape color="Blue" type="Square" />
+      <Greetings names={
+        ['Steph Curry', 'Lebron James', 'Kyle Lowry',
+         'James Harden']
+      }/>
+      <ShadesOfGrey />
     </div>
   );
 }

@@ -1,15 +1,11 @@
 import React from 'react';
+import Shape from './Shape';
 
-function Square (props) {
+export function Square (props) {
   // having a default color
   const { color = 'Blue'} = props;
 
-  const style = {
-    height: '50px',
-    width: '50px',
-    backgroundColor: props.color
-  }
-  return <div style={style} className="blue square"></div>
+  return <Shape {...props} color={color} />
 }
 
 export function BlueSquare (props) {
